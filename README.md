@@ -23,6 +23,9 @@ pip install holidays pyarrow
 
 ### Command	Description
 conda activate gra4157 -- Activate your environment
+
 conda deactivate -- Deactivate current environment
+
 conda env list	-- List all environments
+
 conda list	-- List installed packages
