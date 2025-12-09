@@ -81,17 +81,28 @@ python main.py forecast --help
 
 ## Folder hierarchy (key paths)
 - `main.py` — root CLI (forecast, hydro)
-- `modeling/` — forecasting pipeline, features, training, plotting and a palette file for colours
+- `modeling/` — forecasting pipeline code
+  - `run_pipeline_cli.py` — main orchestration: data load, feature build, train, plot
+  - `data_preparation.py` — build mspread (merge DA/mFRR), ensure long format
+  - `features.py` — create time features and lags
+  - `train_models.py` — Ridge / RF / XGB training for primary/lag1/2h/3h
+  - `diagnostics.py` — basic plots (prices, spread hist)
+  - `diagnostics_advanced.py` — timelines, zoom, residuals, scatter, feature importances
+  - `metrics_utils.py` — save metrics and feature importances to CSV
+  - `palette.py` — shared colours for modeling plots
 - `hydrology/` — hydrology ETL/CLI/viz helpers
   - `hydrology_download.py` — fetch raw hydrology CSV (API fallback)
-  - `hydrology_clean.py` — clean + write `data/clean/weekly_hydro.parquet`, `hpi.parquet`
+  - `hydrology_clean.py` — clean + write `data/clean/weekly_hydro.parquet`, `hpi.parquet`, `tbl_hpi_latest.csv`
   - `hydrology_cli.py` — hydrology subcommand handler
-  - `data_loader.py`, `processing.py`, `visualization.py` — EDA helpers
+  - `data_loader.py`, `processing.py`, `visualization.py` — fetching/EDA/plotting helpers
 - `data/raw/` — DA/mFRR raw CSVs; `data/raw/hydro/reservoir.csv` from hydrology download
 - `data/clean/` — cleaned datasets (e.g., `weekly_hydro.parquet`, price/hydro joins)
 - `outputs/figures/` — forecast plots; subfolders per horizon (primary, lag1, 2h, 3h)
 - `outputs/hydro/` — hydrology plots
+- `outputs/metrics/` — model metrics per area/horizon
+- `outputs/feature_importances/` — saved importances for Ridge/RF/XGB
 - `outputs/tables/` — tables (latest-week, etc.)
+
 
 
 ## Used directly in the report
