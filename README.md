@@ -72,6 +72,7 @@ python main.py forecast --help
 - DA raw: `data/raw/AuctionPriceIndex_*DayAhead*.csv` [*]
 - mFRR raw: `data/raw/BalanceMarket_*NO*.csv` [*]
 - Hydrology clean: `data/clean/weekly_hydro.parquet` (created by hydrology pipeline)
+
 [*]Data is classified, and is from NordPool
 
 ## Notes
