@@ -1,0 +1,12 @@
+feature,importance
+spread_lag_2h,0.09037401
+spread_lag_3h,0.06472734
+spread_lag_4h,0.077577695
+hour_sin,0.07822582
+hour_cos,0.09777886
+dow_sin,0.07853317
+dow_cos,0.078205734
+month_sin,0.12240438
+month_cos,0.09873697
+reservoir_pct,0.081283845
+HPI,0.13215213
