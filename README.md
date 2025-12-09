@@ -1,4 +1,4 @@
-# Guide (Hydrology + Modeling)
+# Script Guide (Hydrology + Modeling)
 
 ## Prerequisites
 - Python 3.11 
