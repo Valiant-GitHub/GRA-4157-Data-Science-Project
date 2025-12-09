@@ -69,9 +69,10 @@ python main.py forecast --help
 - Plots overlay the full history and highlight the test window; predictions are shown on the test slice.
 
 ## Data expectations
-- DA raw: `data/raw/AuctionPriceIndex_*DayAhead*.csv`
-- mFRR raw: `data/raw/BalanceMarket_*NO*.csv`
+- DA raw: `data/raw/AuctionPriceIndex_*DayAhead*.csv` [*]
+- mFRR raw: `data/raw/BalanceMarket_*NO*.csv` [*]
 - Hydrology clean: `data/clean/weekly_hydro.parquet` (created by hydrology pipeline)
+[*]Data is classified, and is from NordPool
 
 ## Notes
 - If hydrology files are missing, the forecast pipeline continues but skips hydrology features (prints a warning).
